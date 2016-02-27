@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Metronome</title>
 
-  </head>
-  <body ng-app="metronome" ng-controller="main">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Metronome</title>
 
-    <h1>{{::title}}</h1>
+</head>
 
-    <script src="../node_modules/angular/angular.min.js"></script>
-    <script src="js/app.js">
+<body ng-app="metronome" ng-controller="main">
 
-    </script>
-  </body>
+  <h1>{{::title}}</h1>
+
+  <button type="button" name="button" ng-click="startStop()">
+    <span ng-show="playing"> Stop</span>
+    <span ng-hide="playing"> Start</span>
+  </button>
+  
+  <audio id="player" src="{{son}}">
+    Votre navigateur ne supporte pas l'élément <code>audio</code>
+  </audio>
+
+  <input type="number" name="tempo" value="{{tempo}}" ng-model="tempo">
+
+
+  <script src="../node_modules/angular/angular.min.js"></script>
+  <script src="js/app.js">
+  </script>
+</body>
+
 </html>
