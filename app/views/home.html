@@ -1,0 +1,17 @@
+<h1>{{::title}}</h1>
+
+<button type="button" name="button" ng-click="startStop()">
+  <span ng-show="config.playing">
+    Stop</span>
+  <span ng-hide="config.playing">
+    Start</span>
+</button>
+
+<!-- <span>{{config}}</span> -->
+
+<audio id="player" src="{{config.son}}">
+  Votre navigateur ne supporte pas l'élément
+  <code>audio</code>
+</audio>
+
+<input type="number" name="tempo" value="{{config.tempo}}" ng-model="config.tempo">
