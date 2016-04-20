@@ -2,6 +2,7 @@
 (function() {
   'use strick';
 
-  angular.module('metronome', ['ngRoute']);
+  angular
+    .module('metronome', ['ngRoute']);
 
 })();

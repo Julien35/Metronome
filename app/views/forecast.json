@@ -1,0 +1,12 @@
+{
+  "GetAllCustomersResult": [{
+    "CompanyName": "Alfreds Futterkiste",
+    "CustomerID": "ALFKI"
+  }, {
+    "CompanyName": "Ana Trujillo Emparedados y helados",
+    "CustomerID": "ANATR"
+  }, {
+    "CompanyName": "Antonio Moreno Taquería",
+    "CustomerID": "ANTON"
+  }]
+}

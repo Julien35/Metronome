@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Metronome</title>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Metronome</title>
 
-</head>
+  </head>
 
-<body ng-app="metronome">
+  <body ng-app="metronome">
 
-  <!-- ng-view appelle les extraits de pages définies dans routes.js -->
-  <div ng-view></div>
+    <!-- ng-view appelle les extraits de pages définies dans routes.js -->
+    <div ng-view></div>
 
+    <!-- angular module -->
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="../node_modules/angular-route/angular-route.js"></script>
 
-  <script src="../node_modules/angular/angular.min.js"></script>
-  <script src="../node_modules/angular-route/angular-route.js"></script>
+    <!-- build:js scripts/main.js -->
+    <script src="js/app.js"></script>
+    <script src="js/routes.js"></script>
+    <!-- endbuild -->
 
-  <script src="js/app.js"></script>
-  <script src="js/routes.js"></script>
-<!-- home -->
-  <script src="views/home_service.js"></script>
-  <script src="views/home_controller.js"></script>
+    <!-- home -->
+    <script src="views/home_service.js"></script>
+    <script src="views/home_controller.js"></script>
+    <script src="views/home_conf.js"></script>
 
-</body>
+  </body>
 
 </html>

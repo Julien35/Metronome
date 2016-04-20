@@ -1,45 +1,70 @@
-angular.module('metronome').service('homeService', function($timeout) {
+(function() {
+  'use strick';
 
-  // new Object() === {}
+  angular
+    .module('metronome')
+    .service('homeService', homeService);
 
-  var config = {
-    playing: false,
-    son: 'audio/son.ogg',
-    tempo: 4
-  };
+  function homeService($timeout, $http, $q, homeConf) {
 
-  //Object service retourné dans homeController
-  var service = {
-    startStop: startStop,
-    config: config
-  };
+    // variable name such as vm, which stands for ViewModel
+    var vm = this;
+    vm.conf = [];
+    vm.getConf = getConf;
+    vm.player = document.getElementById('player');
+    vm.playerStop = playerStop;
+    vm.startStop = startStop;
+    vm.playTempo = playTempo;
 
-  var player = document.getElementById('player');
-  console.log(player);
+    var config = {
+      IsPlaying: false,
+      son: 'audio/son.ogg',
+      tempo: 4,
+    };
 
-  player.stop = function() {
-    player.pause();
-    player.currentTime = 0;
-  };
+    getConf();
+    // console.log(homeConf.success);
 
-  function startStop() {
-    config.playing = !config.playing;
-    console.log('playing startStop', config.playing);
-    if (config.playing) {
-      playTempo();
+    //Object service retourné dans homeController
+    var service = {
+      startStop: startStop,
+      config: config
+    };
+    return service;
+
+    // funtions
+    function getConf() {
+      return homeConf.then(function(data) {
+        vm.conf = data;
+        console.log("data", data);
+        // console.log("data.response.posts = ", data.response.posts);
+      });
     }
-  }
 
-  function playTempo() {
-    $timeout(function() {
-      player.stop();
-      player.play();
-      if (config.playing) {
+    function playerStop() {
+      player.pause();
+      player.currentTime = 0;
+    }
+
+    function startStop() {
+      config.IsPlaying = !config.IsPlaying;
+      console.log('IsPlaying startStop', config.IsPlaying);
+      if (config.IsPlaying) {
         playTempo();
       }
-    }, Math.round(1 / config.tempo * 1000));
-    console.log('tempo', config.tempo);
+    }
+
+    function playTempo() {
+      $timeout(function() {
+        playerStop();
+        player.play();
+        if (config.IsPlaying) {
+          playTempo();
+        }
+      }, Math.round(1 / config.tempo * 1000));
+      console.log('tempo', config.tempo);
+    }
+
   }
 
-  return service;
-});
+})();

@@ -1,16 +1,20 @@
 (function() {
   'use strick';
 
-  angular.module('metronome').config(function($routeProvider,
+  angular
+    .module('metronome')
+    .config(config);
+
+  function config($routeProvider,
     $locationProvider) {
 
     $routeProvider
       .when('/', {
         templateUrl: 'views/home.html',
         controller: 'homeController',
+        controllerAs: 'homeCtrl'
       });
 
-  });
-  // configure html5 to get links working on jsfiddle
-  //$locationProvider.html5Mode(true);
+  }
+
 })();
