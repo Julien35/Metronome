@@ -11,6 +11,7 @@
     $routeProvider
       .when('/', {
         templateUrl: 'views/home.html',
+        // delete ng-controller="homeController as homeCtrl" in home.html if use
         controller: 'homeController',
         controllerAs: 'homeCtrl'
       });

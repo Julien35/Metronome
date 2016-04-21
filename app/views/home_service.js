@@ -5,7 +5,7 @@
     .module('metronome')
     .service('homeService', homeService);
 
-  function homeService($timeout, $http, $q, homeConf) {
+  function homeService($timeout, $http, $q) {
 
     // variable name such as vm, which stands for ViewModel
     var vm = this;
@@ -22,7 +22,7 @@
       tempo: 4,
     };
 
-    getConf();
+    // getConf();
     // console.log(homeConf.success);
 
     //Object service retourné dans homeController

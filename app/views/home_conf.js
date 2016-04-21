@@ -8,9 +8,9 @@
   function homeConf($http) {
 
     return $http.get(
-        // 'https://s3.amazonaws.com/codecademy-content/courses/ltp4/forecast-api/forecast.json'
+        'https://s3.amazonaws.com/codecademy-content/courses/ltp4/forecast-api/forecast.json'
         // 'views/paramHome.json'
-        'http://metronome/app/views/forecast.json'
+        // 'http://metronome/app/views/forecast.json'
       )
       .success(function(data) {
         console.log("json success");
