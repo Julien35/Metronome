@@ -16,10 +16,10 @@
     "jquery": "^2.2.3"
   },
   "devDependencies": {
-    "lite-server": "^2.2.0"
+    "http-server": "^0.9.0"
   },
   "scripts": {
     "start": "npm run dev",
-    "dev": "cd app && lite-server"
+    "dev": "http-server"
   }
 }
