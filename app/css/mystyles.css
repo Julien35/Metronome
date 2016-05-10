@@ -1,0 +1,12 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+
+
+}
+.row-footer {
+    position: fixed;
+    height: 60px;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(17, 28, 17);
+}

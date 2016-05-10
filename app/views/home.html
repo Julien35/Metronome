@@ -1,22 +1,28 @@
 <!DOCTYPE html>
-<div>
 <!-- <div ng-controller="homeController as homeCtrl"> -->
+<div class="container">
+    <div class="row row-content">
+        <div class="col-xs-12">
 
-    <h1>{{::homeCtrl.title}}</h1>
+            <!-- A intégrer dans nouvelle vue header -->
+            <!-- <h1>{{::homeCtrl.title}}</h1> -->
 
-    <button type="button" name="button" ng-click="homeCtrl.startStop()">
-        <span ng-show="homeCtrl.config.IsPlaying">
-            Stop</span>
-        <span ng-hide="homeCtrl.config.IsPlaying">
-            Start</span>
-    </button>
+            <button type="button" name="button" ng-click="homeCtrl.startStop()">
+                <span ng-show="homeCtrl.config.IsPlaying">
+                    Stop</span>
+                <span ng-hide="homeCtrl.config.IsPlaying">
+                    Start</span>
+            </button>
 
-    <!-- <span>{{config}}</span> -->
+            <!-- <span>{{config}}</span> -->
 
-    <audio id="player" src="{{homeCtrl.config.son}}">
-        Votre navigateur ne supporte pas l'élément
-        <code>audio</code>
-    </audio>
+            <audio id="player" src="{{homeCtrl.config.son}}">
+                Votre navigateur ne supporte pas l'élément
+                <code>audio</code>
+            </audio>
 
-    <input type="number" name="tempo" value="{{homeCtrl.config.tempo}}" ng-model="homeCtrl.config.tempo"/>
+            <input type="number" name="tempo" value="{{homeCtrl.config.tempo}}" ng-model="homeCtrl.config.tempo"/>
+
+        </div>
+    </div>
 </div>
