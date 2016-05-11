@@ -9,8 +9,8 @@
 
     return $http.get(
         'https://s3.amazonaws.com/codecademy-content/courses/ltp4/forecast-api/forecast.json'
-        // '/views/mainHome/mainHome.param.json'
-        // 'http://metronome/app/views/mainHome/forecast.json'
+        // '/conf/mainHome.param.json'
+        // 'http://metronome/app/conf/forecast.json'
       )
       .success(function(data) {
         console.log("json success");
