@@ -3,9 +3,9 @@
 
   angular
     .module('metronome')
-    .service('homeService', homeService);
+    .service('bodyService', bodyService);
 
-  function homeService($timeout, $http, $q) {
+  function bodyService($timeout, $http, $q) {
 
     // variable name such as vm, which stands for ViewModel
     var vm = this;
@@ -23,9 +23,9 @@
     };
 
     // getConf();
-    // console.log(homeConf.success);
+    // console.log(bodyConf.success);
 
-    //Object service retourné dans homeController
+    //Object service retourné dans bodyController
     var service = {
       startStop: startStop,
       config: config
@@ -34,7 +34,7 @@
 
     // funtions
     function getConf() {
-      return homeConf.then(function(data) {
+      return bodyConf.then(function(data) {
         vm.conf = data;
         console.log("data", data);
         // console.log("data.response.posts = ", data.response.posts);

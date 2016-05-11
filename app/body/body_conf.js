@@ -3,14 +3,14 @@
 
   angular
     .module('metronome')
-    .factory('homeConf', homeConf);
+    .factory('bodyConf', bodyConf);
 
-  function homeConf($http) {
+  function bodyConf($http) {
 
     return $http.get(
         'https://s3.amazonaws.com/codecademy-content/courses/ltp4/forecast-api/forecast.json'
-        // 'views/paramHome.json'
-        // 'http://metronome/app/views/forecast.json'
+        // 'body/paramBody.json'
+        // 'http://metronome/app/body/forecast.json'
       )
       .success(function(data) {
         console.log("json success");

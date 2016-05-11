@@ -9,26 +9,26 @@
 
     $urlRouterProvider.otherwise('/');
 
-    $stateProvider.state('home', {
+    $stateProvider.state('body', {
       url: '/',
       views: {
 
         'header': {
-          templateUrl: 'views/assets/header.html'
+          templateUrl: 'header/header.html'
         },
 
         'nav': {
-          templateUrl: 'views/assets/nav.html'
+          templateUrl: 'nav/nav.html'
         },
 
-        'home': {
-          templateUrl: 'views/home.html',
-          controller: 'homeController',
-          controllerAs: 'homeCtrl'
+        'body': {
+          templateUrl: 'body/body.html',
+          controller: 'bodyController',
+          controllerAs: 'bodyCtrl'
         },
 
         'footer': {
-          templateUrl: 'views/assets/footer.html'
+          templateUrl: 'footer/footer.html'
         }
 
       }
