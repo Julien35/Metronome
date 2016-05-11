@@ -5,30 +5,31 @@
     .module('metronome', ['ui.router'])
     .config(config);
 
+
   function config($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise('/');
 
-    $stateProvider.state('body', {
+    $stateProvider.state('mainHome', {
       url: '/',
       views: {
 
-        'header': {
-          templateUrl: 'header/header.html'
+        'mainHeader': {
+          templateUrl: 'views/common/mainHeader/mainHeader.template.html'
         },
 
-        'nav': {
-          templateUrl: 'nav/nav.html'
+        'mainNav': {
+          templateUrl: 'views/common/mainNav/mainNav.template.html'
         },
 
-        'body': {
-          templateUrl: 'body/body.html',
-          controller: 'bodyController',
-          controllerAs: 'bodyCtrl'
+        'mainHome': {
+          templateUrl: 'views/mainHome/mainHome.template.html',
+          controller: 'mainHomeController',
+          controllerAs: 'mainHomeCtrl'
         },
 
-        'footer': {
-          templateUrl: 'footer/footer.html'
+        'mainFooter': {
+          templateUrl: 'views/common/mainFooter/mainFooter.template.html'
         }
 
       }

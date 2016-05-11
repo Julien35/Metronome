@@ -11,16 +11,16 @@
         <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="../node_modules/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
 
-        <link href="css/mystyles.css" rel="stylesheet">
+        <link href="styles/mystyles.css" rel="stylesheet">
 
     </head>
 
     <body ng-app="metronome">
 
-        <div ui-view="header"></div>
-        <div ui-view="nav"></div>
-        <div ui-view="body"></div>
-        <div ui-view="footer"></div>
+        <div ui-view="mainHeader"></div>
+        <div ui-view="mainNav"></div>
+        <div ui-view="mainHome"></div>
+        <div ui-view="mainFooter"></div>
         <div ui-view></div>
 
         <!-- angular module -->
@@ -32,10 +32,10 @@
         <script src="app.routes.js"></script>
         <!-- endbuild -->
 
-        <!-- body -->
-        <script src="body/body_service.js"></script>
-        <script src="body/body_controller.js"></script>
-        <script src="body/body_conf.js"></script>
+        <!-- mainHome -->
+        <script src="views/mainHome/mainHome.service.js"></script>
+        <script src="views/mainHome/mainHome.controller.js"></script>
+        <script src="views/mainHome/mainHome.conf.js"></script>
 
     </body>
 

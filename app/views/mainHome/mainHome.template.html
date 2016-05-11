@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- <div ng-controller="mainHomeController as mainHomeCtrl"> -->
+<div class="container">
+    <div class="row row-content">
+        <div class="col-xs-12">
+
+            <!-- A intégrer dans nouvelle vue header -->
+            <!-- <h1>{{::mainHomeCtrl.title}}</h1> -->
+
+            <button type="button" name="button" ng-click="mainHomeCtrl.startStop()">
+                <span ng-show="mainHomeCtrl.config.IsPlaying">
+                    Stop</span>
+                <span ng-hide="mainHomeCtrl.config.IsPlaying">
+                    Start</span>
+            </button>
+
+            <!-- <span>{{config}}</span> -->
+
+            <audio id="player" src="{{mainHomeCtrl.config.son}}">
+                Votre navigateur ne supporte pas l'élément
+                <code>audio</code>
+            </audio>
+
+            <input type="number" name="tempo" value="{{mainHomeCtrl.config.tempo}}" ng-model="mainHomeCtrl.config.tempo"/>
+
+        </div>
+    </div>
+</div>

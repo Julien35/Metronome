@@ -3,9 +3,9 @@
 
   angular
     .module('metronome')
-    .service('bodyService', bodyService);
+    .service('mainHomeService', mainHomeService);
 
-  function bodyService($timeout, $http, $q) {
+  function mainHomeService($timeout, $http, $q) {
 
     // variable name such as vm, which stands for ViewModel
     var vm = this;
@@ -18,23 +18,23 @@
 
     var config = {
       IsPlaying: false,
-      son: 'audio/son.ogg',
+      son: 'assets/audio/son.ogg',
       tempo: 4,
     };
 
     // getConf();
-    // console.log(bodyConf.success);
+    // console.log(mainHomeConf.success);
 
-    //Object service retourné dans bodyController
+    //Object service retourné dans mainHomeController
     var service = {
       startStop: startStop,
       config: config
     };
     return service;
 
-    // funtions
+    // functions
     function getConf() {
-      return bodyConf.then(function(data) {
+      return mainHomeConf.then(function(data) {
         vm.conf = data;
         console.log("data", data);
         // console.log("data.response.posts = ", data.response.posts);
