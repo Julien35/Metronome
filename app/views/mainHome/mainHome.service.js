@@ -15,15 +15,18 @@
     vm.playerStop = playerStop;
     vm.startStop = startStop;
     vm.playTempo = playTempo;
+    vm.filterInt = filterInt;
+
+    // var tempo1 = 4;
+    // var tempo2 = 3;
 
     var config = {
       IsPlaying: false,
       son: 'assets/audio/son.ogg',
       tempo: 4,
+      tempo2: 3,
     };
 
-    // getConf();
-    // console.log(mainHomeConf.success);
 
     //Object service retourné dans mainHomeController
     var service = {
@@ -33,6 +36,14 @@
     return service;
 
     // functions
+    function filterInt(value) {
+      if (typeof(value) === 'number') {
+        return value;
+      }
+      return parseFloat("value");
+    }
+
+
     function getConf() {
       return mainHomeConf.then(function(data) {
         vm.conf = data;
@@ -62,7 +73,12 @@
           playTempo();
         }
       }, Math.round(1 / config.tempo * 1000));
+
       console.log('tempo', config.tempo);
+      console.log('tempo2', config.tempo2);
+      console.log('typeof tempo2 ', typeof(config.tempo2));
+      var test = filterInt("3");
+      console.log("test : ", test);
     }
 
   }

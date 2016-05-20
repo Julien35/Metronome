@@ -4,9 +4,6 @@
     <div class="row row-content">
         <div class="col-xs-12">
 
-            <!-- A intégrer dans nouvelle vue header -->
-            <!-- <h1>{{::mainHomeCtrl.title}}</h1> -->
-
             <button type="button" name="button" ng-click="mainHomeCtrl.startStop()">
                 <span ng-show="mainHomeCtrl.config.IsPlaying">
                     Stop</span>
@@ -14,14 +11,17 @@
                     Start</span>
             </button>
 
-            <!-- <span>{{config}}</span> -->
 
             <audio id="player" src="{{mainHomeCtrl.config.son}}">
                 Votre navigateur ne supporte pas l'élément
                 <code>audio</code>
             </audio>
 
-            <input type="number" name="tempo" value="{{mainHomeCtrl.config.tempo}}" ng-model="mainHomeCtrl.config.tempo"/>
+            <input type="number" name="tempo" value="{{mainHomeCtrl.config.tempo}}" ng-model="mainHomeCtrl.config.tempo" min="1" max="260"/>
+            <input type="range" name="tempo" value="{{mainHomeCtrl.config.tempo2}}"
+                    ng-model="mainHomeCtrl.config.tempo2" min="1" max="260"
+                    ng-model-options="{ getterSetter: true }" />
+
 
         </div>
     </div>

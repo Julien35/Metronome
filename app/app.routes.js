@@ -15,7 +15,9 @@
       views: {
 
         'mainHeader': {
-          templateUrl: 'views/common/mainHeader/mainHeader.template.html'
+          templateUrl: 'views/common/mainHeader/mainHeader.template.html',
+          controller: 'mainHeaderController',
+          controllerAs: 'mainHeaderCtrl'
         },
 
         'mainNav': {
