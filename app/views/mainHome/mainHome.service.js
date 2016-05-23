@@ -40,7 +40,7 @@
       if (typeof(value) === 'number') {
         return value;
       }
-      return parseFloat("value");
+      return parseInt("value");
     }
 
 
