@@ -16,32 +16,33 @@
     vm.startStop = startStop;
     vm.playTempo = playTempo;
 
+
+    // var config, tout est retourné, mais à quoi sert service {}
     var config = {
       IsPlaying: false,
       son: 'assets/audio/son.ogg',
       tempo: 4,
     };
 
-    vm.Tempo = Tempo;
+    vm.tempoValue = tempoValue;
     vm._newTempo = config.tempo;
-    vm.user = {
-      Tempo: Tempo
-    };
 
     //Object service retourné dans mainHomeController
-    var service = {
-      startStop: startStop,
-      config: config,
-      Tempo: Tempo
-    };
-    return service;
+    // var service = {
+    //   startStop: startStop,
+    //   config: config,
+    //   tempoValue: tempoValue
+    // };
+    // return service;
+
+    // console.log("service : ", service);
 
 
     //////////////////////
 
     // functions
 
-    function Tempo(newTempo) {
+    function tempoValue(newTempo) {
       if (typeof(newTempo === 'string')) {
         newTempo = parseInt(newTempo, 10);
       }
