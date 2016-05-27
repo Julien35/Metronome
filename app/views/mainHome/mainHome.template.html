@@ -2,7 +2,7 @@
 <!-- <div ng-controller="mainHomeController as mainHomeCtrl"> -->
 <div class="container">
     <div class="row row-content">
-        <div class="col-xs-12">
+        <div class="col-xs-12 col-sm-6">
 
             <button type="button" name="button" ng-click="mainHomeCtrl.startStop()">
                 <span ng-show="mainHomeCtrl.config.IsPlaying">
@@ -11,17 +11,16 @@
                     Start</span>
             </button>
 
-
             <audio id="player" src="{{mainHomeCtrl.config.son}}">
                 Votre navigateur ne supporte pas l'élément
                 <code>audio</code>
             </audio>
 
-            <input type="number" name="tempo" value="{{mainHomeCtrl.config.tempo}}" ng-model="mainHomeCtrl.config.tempo" min="1" max="260"/>
-            <input type="range" name="tempo" value="{{mainHomeCtrl.config.tempo2}}"
-                    ng-model="mainHomeCtrl.config.tempo2" min="1" max="260"
-                    ng-model-options="{ getterSetter: true }" />
-                    
+            <span>Tempo : </span>
+            <input  ng-bind="mainHomeCtrl.Tempo()" type="number" name="tempo" min="1" max="260" ng-model="mainHomeCtrl.Tempo" ng-model-options="{ getterSetter: true }"/>
+            <input type="range" name="tempo" min="1" max="260"  ng-model="mainHomeCtrl.Tempo" ng-model-options="{ getterSetter: true }"/>
+
         </div>
+
     </div>
 </div>

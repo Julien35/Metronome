@@ -15,32 +15,37 @@
     vm.playerStop = playerStop;
     vm.startStop = startStop;
     vm.playTempo = playTempo;
-    vm.filterInt = filterInt;
-
-    // var tempo1 = 4;
-    // var tempo2 = 3;
 
     var config = {
       IsPlaying: false,
       son: 'assets/audio/son.ogg',
       tempo: 4,
-      tempo2: 3,
     };
 
+    vm.Tempo = Tempo;
+    vm._newTempo = config.tempo;
+    vm.user = {
+      Tempo: Tempo
+    };
 
     //Object service retourné dans mainHomeController
     var service = {
       startStop: startStop,
-      config: config
+      config: config,
+      Tempo: Tempo
     };
     return service;
 
+
+    //////////////////////
+
     // functions
-    function filterInt(value) {
-      if (typeof(value) === 'number') {
-        return value;
+
+    function Tempo(newTempo) {
+      if (typeof(newTempo === 'string')) {
+        newTempo = parseInt(newTempo, 10);
       }
-      return parseInt("value");
+      return arguments.length ? (vm._newTempo = newTempo) : vm._newTempo;
     }
 
 
@@ -75,10 +80,6 @@
       }, Math.round(1 / config.tempo * 1000));
 
       console.log('tempo', config.tempo);
-      console.log('tempo2', config.tempo2);
-      console.log('typeof tempo2 ', typeof(config.tempo2));
-      var test = filterInt("3");
-      console.log("test : ", test);
     }
 
   }

@@ -12,6 +12,7 @@
     //Bonne pratique de pré déclaration des fonctions.
     vm.startStop = mainHomeService.startStop;
     vm.config = mainHomeService.config;
+    vm.Tempo = mainHomeService.Tempo;
 
     // console.log("mainHomeService dans mainHomeController = ", mainHomeService);
 

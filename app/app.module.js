@@ -3,6 +3,6 @@
   'use strick';
 
   angular
-    .module('metronome');
+    .module('metronome', []);
 
 })();
