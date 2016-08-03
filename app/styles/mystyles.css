@@ -1,7 +1,10 @@
 /* Sticky footer styles
 -------------------------------------------------- */
 
-
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
 }
 .row-footer {
     position: fixed;
