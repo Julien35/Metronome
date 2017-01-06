@@ -1,8 +1,8 @@
 //fonction annonyme autoexécutée
-(function() {
-  'use strick';
+(function () {
+    'use strick';
 
-  angular
-    .module('metronome', []);
+    angular
+        .module('metronome', []);
 
 })();
