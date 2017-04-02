@@ -14,8 +14,5 @@
     vm.config = mainHomeService.config;
     vm.tempoValue = mainHomeService.tempoValue;
 
-    // console.log("mainHomeService dans mainHomeController = ", mainHomeService);
-
   }
-
 })();
