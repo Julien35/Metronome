@@ -1,5 +1,5 @@
 (function() {
-  'use strick';
+  'use strict';
 
   angular
     .module('metronome')
@@ -12,7 +12,7 @@
     var config = {
       IsPlaying: false,
       son: 'assets/audio/son.ogg',
-      tempo: 4,
+      tempo: 4
     };
 
     vm.conf = [];

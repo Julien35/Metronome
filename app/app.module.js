@@ -1,6 +1,6 @@
 //fonction annonyme autoexécutée
 (function () {
-    'use strick';
+    'use strict';
 
     angular
         .module('metronome', []);

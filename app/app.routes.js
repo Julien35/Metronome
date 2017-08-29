@@ -1,5 +1,5 @@
 (function() {
-  'use strick';
+  'use strict';
 
   angular
     .module('metronome', ['ui.router'])
@@ -45,7 +45,7 @@
 
 // Old version
 // (function() {
-//   'use strick';
+//   'use strict';
 //
 //   angular
 //     .module('metronome')
